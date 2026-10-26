@@ -465,7 +465,10 @@ function App() {
           sx={{ mt: 5, alignItems: "flex-start", pb: 4 }}
         >
           {[0, 1, 2].map((column) => (
-            <Grid key={column} size={column === 2 ? 12 : 6}>
+            <Grid
+              key={column}
+              size={{ xs: 12, sm: column === 2 ? 12 : 6 }}
+            >
               <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
                 {commands
                   .filter((section, index) => {
